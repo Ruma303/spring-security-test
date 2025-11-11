@@ -6,8 +6,8 @@ spring:
     name: ${SPRING_APP_NAME:spring-security-course}
   security:
     user:
-      name: ${SPRING_SECURITY_USER_NAME:user}
-      password: ${SPRING_SECURITY_USER_PASSWORD:password}
+      name: ${SPRING_SECURITY_USER_NAME:root}
+      password: ${SPRING_SECURITY_USER_PASSWORD:root}
 
 logging:
   pattern:
