@@ -26,9 +26,9 @@ public class ProjectSecurityConfig {
         // http.formLogin().disable(); // Vecchio metodo deprecato per disattivare il form login
         http.formLogin(flc -> flc.disable());
 
-        // http.httpBasic(withDefaults());
+        http.httpBasic(withDefaults());
 
-        http.httpBasic(htb -> htb.disable()); // Disattivazione
+        // http.httpBasic(htb -> htb.disable()); // Disattivazione
         return http.build();
     }
 }
