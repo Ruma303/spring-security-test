@@ -11,19 +11,25 @@ spring:
       password: ${SPRING_SECURITY_USER_PASSWORD:root}
 
   datasource:
-    url: jdbc:mysql://localhost:3306/spring_security?serverTimezone=UTC
+    url: jdbc:h2:mem:testdb
     username: root
     password:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.h2.Driver
 
-  jpa:
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+#  jpa:
+#    database-platform: org.hibernate.dialect.MySQL8Dialect
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql:
+
 
 logging:
   pattern:
